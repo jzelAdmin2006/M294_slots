@@ -1,12 +1,14 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, shallowRef } from 'vue'
 import Gallery from './components/Gallery.vue'
 import GalleryImage from './components/GalleryImage.vue'
 import GalleryVideo from './components/GalleryVideo.vue'
+import GalleryAudio from './components/GalleryVideo.vue'
 
-const components = ref({
+const components = shallowRef({
   image: GalleryImage,
-  video: GalleryVideo
+  video: GalleryVideo,
+  audio: GalleryAudio
 })
 
 const galleries = ref([
@@ -50,6 +52,7 @@ const galleries = ref([
       { id: 12, type: 'image', src: 'https://unsplash.it/640/425?hash=l2', description: "Der Beschreibungstext zum Bild" },
       { id: 13, type: 'video', src: 'https://www.youtube.com/embed/EkhFza9IhrM?controls=0', description: "Der Beschreibungstext zum Video" },
       { id: 14, type: 'image', src: 'https://unsplash.it/640/425?hash=n2', description: "Der Beschreibungstext zum Bild" },
+      { id: 15, type: 'audio', src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1274499988&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true', description: "Der Beschreibungstext zum Audio" },
     ]
   }
 ])
